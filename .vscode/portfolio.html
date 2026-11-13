@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0a192f;
+            color: #ccd6f6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70px;
+            background-color: #0d2b5b;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ccd6f6;
+        }
+
+        nav ul li a:hover {
+            color: #9b82cb;
+            font-size: 1.02rem;
+        }
+
+        main hr {
+            border: 0;
+            margin: 60px 84px;
+            background: #607bdd;
+            height: 1.2px;
+
+        }
+
+        .left {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 120px 0;
+        }
+
+        .firstsection div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 3rem;
+        }
+
+        .rightSection img {
+            width: 500px;
+            margin: 10px 0;
+        }
+
+        .text-blue {
+            color: #607bdd;
+        }
+
+        .text-grey {
+            color: #8892b0;
+        }
+
+        #element {
+            color: #607bdd;
+        }
+
+        /*-------------------- SKILLS ----------------------*/
+        .skillssection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .skillssection h1 {
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+
+        }
+
+        .skill {
+            padding: 25px;
+            border-radius: 15px;
+            background: #0d2b5b;
+            box-shadow: 0px 5px 15px #607bdd;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-8px);
+        }
+
+        .skill h2 {
+            color: #607bdd;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill p {
+            color: #98a1bc;
+            line-height: 1.5rem;
+        }
+        /*-------------------- PROJECTS ----------------------*/
+ 
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondsection h1 {
+          font-size: 1.9rem;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .vertical {
+            padding: 25px;
+            border-radius: 15px;
+            background-color: #0d2b5b;
+            box-shadow: 0px 5px 10px #607bdd;
+            transition: 0.3s;
+        }
+
+        .vertical:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 10px 25px #607bdd;
+        }
+
+        .vertical h2 {
+            color: #607bdd;
+            margin-bottom: 10px;
+        }
+
+        .vertical p {
+            color: #98a1bc;
+            margin-bottom: 10px;
+        }
+
+        .project-btn {
+            display: inline-block;
+            padding: 9px 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+            color: #607bdd;
+        }
+
+        .project-btn:hover {
+            background-color: #607bdd;
+            color: #0d2b5b;
+        }
+        
+        /*-------------EDUCATION--------------*/
+        .educationsection{
+            max-width: 80vw;
+            margin: auto;
+        }
+        .educationsection h1{
+            font-size: 1.9rem;
+            margin-bottom:20px;
+        }
+        .education{
+            background-color: #0d2b5b;
+            box-shadow: 0px 5px 10px #607bdd;
+            padding: 25px;
+            border-left: 5px solid #0072ff;
+            border-radius: 10px;
+        }
+        .education h2{
+            color: #607bdd;
+            margin-bottom: 10px;
+        }
+        .education p{
+            margin: 8px 0;
+            color: #555;
+        }
+        
+        /*--------------FOOTER----------------*/
+        footer{
+            background-color: #779cd8 ;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+        footer span{
+            color: #0a192f;
+        }
+        
+        /*---------------CONTECT--------------*/
+        .contectsection{
+            max-width: 80vw;
+            margin: auto;
+        }
+        .contectsection h1{
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+        }
+        .contect-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contect-info p{
+            margin: 15px 0;
+            font-size: 17px;
+        }
+
+        .contect-info a{
+            color: #0072ff;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input,
+        textarea{
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 16px;
+            outline: none;   
+        }
+        input:focus,
+        textarea:focus{
+            border-color: #0072ff;
+        }
+        textarea{
+            height: 130px;
+            resize: none;
+        }
+        form button{
+            padding: 12px;
+            border: none;
+            border-radius:7px;
+            background:#0072ff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transform: 0.3s;
+        }
+        form button:hover{
+            background:#111827;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <nav>
+            <div class="left">Personal Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/">ABOUT</a></li>
+                    <li><a href="/">SKILLS</a></li>
+                    <li><a href="/">PROJECTS</a></li>
+                    <li><a href="/">EDUCETIION</a></li>
+                    <li><a href="/">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ================= HOME ================= -->
+
+        <section class="firstsection">
+            <div class="leftSection">
+                Hii, I am <span class="text-blue">Srashti</span> <br>
+                Student of Bachelor of Computer Applications (BCA) from Invertis University, Bareilly. <br>
+                <br> I want to become a <br>
+                <span id="element"></span>
+            </div class="button">
+            <div class="rightSection">
+                <img src="img.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <!-- ================= SKILLS ================= -->
+
+        <section class="skillssection">
+
+            <span class="text-grey">
+                Technologies I work with
+            </span>
+
+            <h1>
+                My Skills
+            </h1>
+
+
+            <div class="skills">
+
+
+                <div class="skill">
+
+                    <h2>
+                        🐍 Python
+                    </h2>
+
+                    <p>
+                        Python programming, OOP,
+                        functions, file handling
+                        and projects.
+                    </p>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <h2>
+                        🌐 HTML
+                    </h2>
+
+                    <p>
+                        Creating structured and
+                        semantic web pages.
+                    </p>
+
+                </div>
+
+                <div class="skill">
+
+                    <h2>
+                        🎨 CSS
+                    </h2>
+
+                    <p>
+                        Responsive design,
+                        layouts and animations.
+                    </p>
+
+                </div>
+
+                <div class="skill">
+
+                    <h2>
+                        ⚡ JavaScript
+                    </h2>
+
+                    <p>
+                        DOM, events and interactive
+                        web applications.
+                    </p>
+
+                </div>
+
+                <div class="skill">
+
+                    <h2>
+                        🗄️ SQL
+                    </h2>
+
+                    <p>
+                        Queries, joins, database
+                        management and DBMS.
+                    </p>
+
+                </div>
+
+                <div class="skill">
+
+                    <h2>
+                        🔧 Git & GitHub
+                    </h2>
+
+                    <p>
+                        Version control and
+                        project management.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="secondsection">
+            <span class="text-grey">What I have done so far</span>
+            <h1>Projects</h1>
+
+            <div class="box">
+                <!--project 1-->
+                <div class="vertical">
+                    <h2>Hangman Game</h2>
+                    <p>
+                        A Python-based word guessing game where the player tries to guess a hidden word by suggesting
+                        letters within a certain number of attempts.
+                    </p>
+                    <p>
+                        <b>Technologies Used:</b> Python
+                    </p>
+                    <a href="https://github.com/srashtigangwar/CodeAlpha-Task1" target="_blank" class="project-btn">
+                        GitHub
+                    </a>
+                </div>
+                <!--project 2-->
+                <div class="vertical">
+                    <h2>Rule-Based Chatbot</h2>
+                    <p>
+                        A simple python chatbot that responds to user input based on predefined rules and patterns. It
+                        can answer basic questions and engage in simple conversations.
+                    </p>
+                    <p>
+                        <b>Technologies Used:</b> Python
+                    </p>
+                    <a href="https://github.com/srashtigangwar/ChatBot/blob/main/bot.py" target="_blank"
+                        class="project-btn">
+                        GitHub
+                    </a>
+                </div>
+                <!--project 3-->
+                <div class="vertical">
+                    <h2>E-Commerce Website</h2>
+                    <p>
+                        A responsive e-commerce website built with HTML, CSS, and JavaScript. It includes features like
+                        product listings, shopping cart, and user authentication.
+                    </p>
+                    <p>
+                        <b>Technologies Used:</b> HTML, CSS, JavaScript
+                    </p>
+                    <a href="https://github.com/srashtigangwar/E-COMMEREC-WEBSITE/tree/main" target="_blank"
+                        class="project-btn">
+                        GitHub
+                    </a>
+                </div>
+                <!--project 4-->
+                <div class="vertical">
+                    <h2>Portfolio Website</h2>
+                    <p>
+                        A responsive portfolio website built with HTML, CSS, and JavaScript. It includes sections for
+                        about me, projects, and contact information.
+                    </p>
+                    <p>
+                        <b>Technologies Used:</b> HTML, CSS, JavaScript
+                    </p>
+                    <a href="#" target="_blank" class="project-btn">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="educationsection">
+            <span class="text-grey">
+                My acadmic backgraound
+            </span>
+            <h1>Education</h1>
+
+            <div class="education">
+                <h2>Bachelor of Computer Applications (BCA)</h2>
+                <p>Invertis University, Bareilly</p>
+                <p>Currently pursuing BCA-3rd Year</p>
+            </div>
+            <br>
+            <div class="education">
+                <h2>Senior Secondary (12th)</h2>
+                <p>S.D.B.I.College,Kaimganj</p>
+                <p>83%</p>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="contectsection">
+            <span class="text-grey"> Get in touch </span>
+
+            <h1>Contect me</h1>
+
+            <div class="contect-container">
+                <div class="contect-info">
+                    <h2>Let's Contect</h2>
+                    <p>
+                        📧 Email:
+                        <a href="mailto:srashtigangwar00@gmail.com">
+                            your-email@gmail.com
+                        </a>
+                    </p>
+                    <p>
+                        💼 LinkedIn:
+                        <a
+                            href="https://www.linkedin.com/in/srashti-gangwar63/"
+                            target="_blank">
+                            LinkedIn Profile
+                        </a>
+                    </p>
+                    <p>
+                        🐙 GitHub:
+                        <a
+                            href="https://github.com/srashtigangwar"
+                            target="_blank">
+                            GitHub Profile
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+        <p>
+            2026
+            <span>Srashti Gangwar</span>
+            All Right Reserved.
+        </p>
+    </footer>
+    
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Data Analyst.', 'Web Developer.', 'Frontend Developer.', 'Backend Developer.'],
+            typeSpeed: 80,
+        });
+    </script>
+</body>
+
+</html>
